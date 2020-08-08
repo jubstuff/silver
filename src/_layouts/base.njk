@@ -7,6 +7,35 @@
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
+
+        <header class="header">
+            <div class="header-measure">
+                <div class="header-logo">
+                    <a href="/">Silver</a>
+                </div>
+                <div class="header-nav">
+                    <nav class="nav">
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/articles/">Articles</a>
+                            </li>
+
+                            <li>
+                                <a href="/about/">About</a>
+                            </li>
+                            <li>
+                                <a href="/newsletter/">Newsletter</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+
         <div class="container mx-auto">
             {{ content | safe }}
         </div>

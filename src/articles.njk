@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+
+<h1 class="text-3xl font-bold text-blue-800">Articles</h1>
+{%- set postslist = collections.posts -%}
+{%- for post in postslist | reverse -%}
+    <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+{%- endfor -%}

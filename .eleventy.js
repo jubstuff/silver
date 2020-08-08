@@ -1,7 +1,13 @@
-module.exports = function (eleventyConfig) {
-	// source folder as key, destination folder as value
+const util = require("util");
+
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addFilter("dump", (obj) => {
+    return util.inspect(obj);
+  });
+
+  // source folder as key, destination folder as value
   // I've also optimized the methods call, putting all in one object
-	eleventyConfig.addPassthroughCopy({
+  eleventyConfig.addPassthroughCopy({
     "public/css": "css",
     "public/js": "js",
     "public/img": "img",
@@ -11,7 +17,7 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "src",
       output: "_site",
-      layouts: "_layouts"
+      layouts: "_layouts",
     },
   };
 };
