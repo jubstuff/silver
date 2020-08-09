@@ -1,8 +1,13 @@
 const util = require("util");
+const dayjs = require("dayjs");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("dump", (obj) => {
     return util.inspect(obj);
+  });
+
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return dayjs(dateObj).format('DD MMM YYYY');
   });
 
   // source folder as key, destination folder as value

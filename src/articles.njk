@@ -1,9 +1,18 @@
 ---
 layout: base.njk
 ---
+{% import "macros.njk" as m %}
 
-<h1 class="text-3xl font-bold text-blue-800">Articles</h1>
+{{ m.hero( 'Articles', 'I write regularly about my work as a designer, focusing on simplicity and accessiblity.  Here’s my' + m.link( "RSS feed", "/atom.xml") + '.' )}}
 {%- set postslist = collections.posts -%}
-{%- for post in postslist | reverse -%}
-    <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-{%- endfor -%}
+
+<div class="container mx-auto my-12">
+    <div class="content-measure px-5">
+        {%- for post in postslist | reverse -%}
+            <h2 class="text-3xl font-bold text-blue-500 leading-tight mb-5">
+                <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+            </h2>
+            <p class="articleList-date text-gray-800 text-base"><time date-time="Mon Jul 13 2020 00:00:00 GMT+0000 (UTC)">{{ post.date | readableDate }}</time></p>
+        {%- endfor -%}
+    </div>
+</div>

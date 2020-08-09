@@ -1,5 +1,22 @@
 ---
 layout: base.njk
 ---
+{% import "macros.njk" as m %}
 
-<h1 class="text-3xl font-bold text-blue-800">Home page</h1>
+{{ m.hero( 'Designer focused on inclusive design and design systems', "Hey 👋 I’m Adam. I'm an interaction designer who makes useful, usable and accessible services, which meet users’ needs." )}}
+<div class="content my-12">
+    <div class="content-measure px-5">
+        <div class="content-block">
+            <div class="content-block1">
+                <h2 class="text-3xl font-bold leading-tight mb-5">Form design patterns book</h2>
+                {{ m.p('I’m a little obsessed with form design 🤓. So I wrote down everything I know about them into one beautiful book.') }}
+                <p class="text-lg mb-6">
+                    {{ m.link( 'Available on Smashing Magazine', 'https://www.smashingmagazine.com/printed-books/form-design-patterns/') }}
+                </p>
+            </div>
+            <div class="content-block2">
+                {{ m.image('https://adamsilver.io/assets/images/book-wooden3.jpg', 'Form design patterns book cover. Photo taken by Graham Veal')}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,12 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "inter": "Inter, arial, sans-serif;",
+      },
+    },
   },
   variants: {},
   plugins: [],
-}
+};
