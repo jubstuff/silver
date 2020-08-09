@@ -3,3 +3,22 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+.page-content {
+    h2 {
+      font-size: theme("fontSize.3xl");
+      font-weight: theme("fontWeight.bold");
+      line-height: theme("lineHeight.tight");
+      margin-bottom: theme("margin.5");
+    }
+  
+    p {
+      margin-bottom: theme("margin.6");
+      font-size: theme("fontSize.lg");
+    }
+
+    a {
+      color: theme('colors.blue.700');
+      text-decoration: underline;
+    }
+  }

@@ -4,6 +4,11 @@ layout: base.njk
 {% import "macros.njk" as m %}
 
 {{ m.hero( 'Articles', 'I write regularly about my work as a designer, focusing on simplicity and accessiblity.  Here’s my' + m.link( "RSS feed", "/atom.xml") + '.' )}}
+
+{% import "macros.njk" as m %}
+
+{{ m.hero( 'About me', "I'm an interaction designer who solves problems through the lens of inclusion." )}}
+
 {%- set postslist = collections.posts -%}
 
 <div class="container mx-auto my-12">

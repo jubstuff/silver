@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+
+{% import "macros.njk" as m %}
+
+{%- if herotitle or herosubtitle -%}
+    {{ m.hero( herotitle, herosubtitle )}}
+{%- endif -%}
+
+{%- container -%}
+<div class="page-content">
+    {{ content | safe }}
+</div>
+{%- endcontainer -%}

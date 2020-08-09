@@ -11,9 +11,10 @@ let tailwindcss = require("tailwindcss");
  |
  */
 
-mix.postCss('src/css/main.css', '_site/css', [
+mix.postCss('src/css/main.css', 'assets/css', [
     require('postcss-import')(),
     tailwindcss('./tailwind.config.js'),
+    require('postcss-nested'),
 ])
 
 // Full API
