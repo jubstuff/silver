@@ -11,29 +11,28 @@
     <body class="border-t-4 border-blue-500 font-inter">
 
         <header class="header">
-            <div class="header-measure">
-                <div class="header-logo text-2xl font-bold my-5 px-5">
+            <div class="header-measure flex flex-wrap justify-between">
+                <div class="w-full header-logo text-2xl font-bold my-5 px-5 md:w-auto md:my-3">
                     <a href="/">Silver</a>
                 </div>
-                <div class="header-nav border-t border-b border-gray-400 px-5 font-gray-500 font-normal text-xl">
+                <div class="header-nav w-full border-t border-b border-gray-400 px-5 font-gray-500 font-normal text-xl md:border-0 md:w-auto">
                     <nav class="nav">
-                        <ul class="flex justify-between">
-                            <li class="py-4">
+                        <ul class="space-x-4 overflow-x-scroll whitespace-no-wrap md:overflow-auto md:whitespace-normal">
+                            <li class="inline-block py-4">
                                 <a class="p-4 {{ 'border-b-4 border-blue-500 font-bold' if '/' == page.url  }}" href="/">Home</a>
                             </li>
-                            <li class="py-4 {{ 'border-b-4 border-blue-500 font-bold' if '/articles/' == page.url  }}">
+                            <li class="inline-block py-4 {{ 'border-b-4 border-blue-500 font-bold' if '/articles/' == page.url  }}">
                                 <a href="/articles/">Articles</a>
                             </li>
 
-                            <li class="py-4 {{ 'border-b-4 border-blue-500 font-bold' if '/about/' == page.url  }}">
+                            <li class="inline-block py-4 {{ 'border-b-4 border-blue-500 font-bold' if '/about/' == page.url  }}">
                                 <a href="/about/">About</a>
                             </li>
-                            <li class="py-4 {{ 'border-b-4 border-blue-500 font-bold' if '/newsletter/' == page.url  }}">
+                            <li class="inline-block py-4 {{ 'border-b-4 border-blue-500 font-bold' if '/newsletter/' == page.url  }}">
                                 <a href="/newsletter/">Newsletter</a>
                             </li>
                         </ul>
                     </nav>
-
                 </div>
             </div>
         </header>
