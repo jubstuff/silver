@@ -14,7 +14,7 @@
   
     p {
       margin-bottom: theme("margin.6");
-      font-size: theme("fontSize.lg");
+      font-size: theme("fontSize.xl");
     }
 
     a {

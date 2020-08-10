@@ -3,14 +3,8 @@ layout: base.njk
 ---
 {% import "macros.njk" as m %}
 
-{{ m.hero( 'Designer focused on inclusive design and design systems', "Hey 👋 I’m Adam. I'm an interaction designer who makes useful, usable and accessible services, which meet users’ needs." )}}
-{%- container -%}
-    <h2 class="text-3xl font-bold leading-tight mb-5">Form design patterns book</h2>
-    {{ m.p('I’m a little obsessed with form design 🤓. So I wrote down everything I know about them into one beautiful book.') }}
-    <p class="text-lg mb-6">
-        {{ m.link( 'Available on Smashing Magazine', 'https://www.smashingmagazine.com/printed-books/form-design-patterns/') }}
-    </p>
-{%- endcontainer -%}
-{%- container -%}
-    {{ m.image('https://adamsilver.io/assets/images/book-wooden3.jpg', 'Form design patterns book cover. Photo taken by Graham Veal')}}
-{%- endcontainer -%}
+{{ m.hero( 'This is my website: welcome!', "Hey 👋 I’m Silver. I'm a simple theme for Eleventy." )}}
+
+{% call m.section2col(title = 'Titolo della sezione', subtitle = 'sottotitolo della sezione') %}
+    <p>Ciao sono un paragrafo</p>
+{%- endcall %}

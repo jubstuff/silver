@@ -1,9 +1,9 @@
 {% macro link(label, url) %}
-    <a class="underline text-blue-700" href="{{ url }}">{{ label | safe }}</a>
+    <a class="text-lg underline text-blue-700 md:text-2xl" href="{{ url }}">{{ label | safe }}</a>
 {% endmacro %}
 
 {% macro p(text) %}
-    <p class="text-lg mb-6">
+    <p class="text-lg mb-6 md:text-2xl">
         {{ text | safe }}
     </p>
 {% endmacro %}
@@ -26,6 +26,20 @@
             {%- if subtitle -%}
                 <p class="heading-text text-2xl leading-tight">{{ subtitle | safe }}</p>
             {%- endif -%}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro section2col(title, subtitle) %}
+    <div class="container mx-auto px-5 my-12">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+                <h2 class="text-3xl font-bold leading-tight mb-5 md:text-4xl">{{ title | safe }}</h2>
+                {{ p(subtitle) }}
+            </div>
+            <div class="page-content md:pt-6">
+                {{ caller() if caller }}
+            </div>
         </div>
     </div>
 {% endmacro %}
